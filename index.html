@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
 
 <title>For Reem ❤️</title>
+
 
 <style>
 
@@ -46,11 +52,13 @@ body {
             #ffb3c6 0%,
             transparent 30%
         ),
+
         radial-gradient(
             circle at 80% 80%,
             #9b5de5 0%,
             transparent 30%
         ),
+
         linear-gradient(
             135deg,
             #ff416c,
@@ -86,6 +94,7 @@ body {
         ease-in-out;
 }
 
+
 .glow.one {
 
     background: #ff1744;
@@ -93,6 +102,7 @@ body {
     top: -100px;
     left: -100px;
 }
+
 
 .glow.two {
 
@@ -103,6 +113,7 @@ body {
 
     animation-delay: 2s;
 }
+
 
 @keyframes moveGlow {
 
@@ -143,6 +154,7 @@ body {
         linear
         forwards;
 }
+
 
 @keyframes floatUp {
 
@@ -216,9 +228,11 @@ body {
         cubic-bezier(.2,.8,.2,1);
 }
 
+
 .card::-webkit-scrollbar {
     width: 0;
 }
+
 
 @keyframes cardIn {
 
@@ -247,8 +261,10 @@ body {
 ===================================================== */
 
 #lockScreen {
+
     display: block;
 }
+
 
 .lock-icon {
 
@@ -262,16 +278,22 @@ body {
         infinite;
 }
 
+
 @keyframes lockPulse {
 
     0%,100% {
-        transform: scale(1);
+
+        transform:
+            scale(1);
     }
 
     50% {
-        transform: scale(1.1);
+
+        transform:
+            scale(1.1);
     }
 }
+
 
 .lock-message {
 
@@ -311,7 +333,9 @@ body {
     color: #333;
 }
 
+
 .password-box::placeholder {
+
     color: #999;
 }
 
@@ -340,12 +364,14 @@ button {
         background .25s ease;
 }
 
+
 button:hover {
 
     transform:
         translateY(-4px)
         scale(1.03);
 }
+
 
 button:active {
 
@@ -387,24 +413,32 @@ button:active {
     color: #ffe4ec;
 }
 
+
 .shake {
 
     animation:
         shake .4s;
 }
 
+
 @keyframes shake {
 
     0%,100% {
-        transform: translateX(0);
+
+        transform:
+            translateX(0);
     }
 
     25% {
-        transform: translateX(-8px);
+
+        transform:
+            translateX(-8px);
     }
 
     75% {
-        transform: translateX(8px);
+
+        transform:
+            translateX(8px);
     }
 }
 
@@ -414,6 +448,7 @@ button:active {
 ===================================================== */
 
 #questionCard {
+
     display: none;
 }
 
@@ -433,16 +468,22 @@ button:active {
         glowHeart 2s infinite alternate;
 }
 
+
 @keyframes heartbeat {
 
     0%,100% {
-        transform: scale(1);
+
+        transform:
+            scale(1);
     }
 
     50% {
-        transform: scale(1.15);
+
+        transform:
+            scale(1.15);
     }
 }
+
 
 @keyframes glowHeart {
 
@@ -483,6 +524,7 @@ button:active {
     margin-bottom: 10px;
 }
 
+
 h1 {
 
     font-size:
@@ -494,6 +536,7 @@ h1 {
 
     margin-bottom: 15px;
 }
+
 
 .message {
 
@@ -520,6 +563,7 @@ h1 {
     gap: 14px;
 }
 
+
 #yesBtn {
 
     background: white;
@@ -530,6 +574,7 @@ h1 {
         0 10px 30px
         rgba(0,0,0,.2);
 }
+
 
 #noBtn {
 
@@ -559,6 +604,7 @@ h1 {
         rgba(255,255,255,.25);
 }
 
+
 .message-title {
 
     font-size: 15px;
@@ -567,6 +613,7 @@ h1 {
 
     opacity: .9;
 }
+
 
 #messageInput {
 
@@ -602,9 +649,12 @@ h1 {
     margin-bottom: 12px;
 }
 
+
 #messageInput::placeholder {
+
     color: #999;
 }
+
 
 .send-message {
 
@@ -619,6 +669,7 @@ h1 {
         rgba(0,0,0,.18);
 }
 
+
 .send-message:disabled {
 
     opacity: .6;
@@ -627,6 +678,7 @@ h1 {
 
     transform: none;
 }
+
 
 #messageStatus {
 
@@ -675,13 +727,14 @@ h1 {
 
 
 /* =====================================================
-   SUCCESS CARD
+   SUCCESS SCREEN
 ===================================================== */
 
 .success {
 
     display: none;
 }
+
 
 .success-heart {
 
@@ -692,6 +745,7 @@ h1 {
         1s
         infinite;
 }
+
 
 @keyframes successBeat {
 
@@ -708,9 +762,12 @@ h1 {
     }
 }
 
+
 .success h1 {
+
     margin-top: 10px;
 }
+
 
 .signature {
 
@@ -736,17 +793,21 @@ h1 {
         max-height: 90vh;
     }
 
+
     .buttons {
 
         flex-direction: column;
     }
+
 
     .buttons button {
 
         width: 100%;
     }
 
+
     .main-heart {
+
         font-size: 65px;
     }
 
@@ -773,7 +834,11 @@ h1 {
      MUSIC
 ===================================================== -->
 
-<audio id="music" loop>
+<audio
+    id="music"
+    loop
+    preload="auto"
+>
 
     <source
         src="song.mp3"
@@ -784,7 +849,9 @@ h1 {
 
 <button
     class="music"
-    id="musicBtn">
+    id="musicBtn"
+    type="button"
+>
 
     🎵
 
@@ -797,21 +864,27 @@ h1 {
 
 <div
     class="card"
-    id="lockScreen">
-
+    id="lockScreen"
+>
 
     <div class="lock-icon">
+
         🔐
+
     </div>
 
 
     <div class="small">
+
         A little secret
+
     </div>
 
 
     <h1>
+
         Hey Reem ❤️
+
     </h1>
 
 
@@ -834,12 +907,15 @@ h1 {
         id="passwordInput"
         class="password-box"
         placeholder="Enter password"
-        autocomplete="off">
+        autocomplete="off"
+    >
 
 
     <button
         class="unlock-btn"
-        id="unlockBtn">
+        id="unlockBtn"
+        type="button"
+    >
 
         Unlock ❤️
 
@@ -861,8 +937,8 @@ h1 {
 
 <div
     class="card"
-    id="questionCard">
-
+    id="questionCard"
+>
 
     <div class="main-heart">
 
@@ -896,7 +972,9 @@ h1 {
         <br><br>
 
         <b>
+
             Pleaseeee shemikkk
+
         </b>
 
     </p>
@@ -906,20 +984,24 @@ h1 {
 
     <div class="buttons">
 
-
-        <button id="yesBtn">
+        <button
+            id="yesBtn"
+            type="button"
+        >
 
             Yes ❤️
 
         </button>
 
 
-        <button id="noBtn">
+        <button
+            id="noBtn"
+            type="button"
+        >
 
             No 😤
 
         </button>
-
 
     </div>
 
@@ -929,7 +1011,6 @@ h1 {
     ================================================= -->
 
     <div class="message-section">
-
 
         <div class="message-title">
 
@@ -941,21 +1022,24 @@ h1 {
         <textarea
             id="messageInput"
             maxlength="500"
-            placeholder="Write something for Ikru... ❤️">
-        </textarea>
+            placeholder="Write something for Ikru... ❤️"
+        ></textarea>
 
 
         <button
             id="sendMessageBtn"
-            class="send-message">
+            class="send-message"
+            type="button"
+        >
 
             Send to Ikru 💌
 
         </button>
 
 
-        <div id="messageStatus"></div>
-
+        <div
+            id="messageStatus"
+        ></div>
 
     </div>
 
@@ -968,8 +1052,8 @@ h1 {
 
 <div
     class="card success"
-    id="successCard">
-
+    id="successCard"
+>
 
     <div class="success-heart">
 
@@ -1023,35 +1107,44 @@ h1 {
 
 
 <!-- =====================================================
-     SUPABASE
+     SUPABASE LIBRARY
 ===================================================== -->
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script
+    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+></script>
 
 
 <script>
 
-
 /* =====================================================
-   SUPABASE CONFIGURATION
+   SUPABASE CONFIG
 ===================================================== */
 
-
 /*
-   WE WILL ADD THESE LATER.
+   IMPORTANT:
+   This must be your PROJECT URL.
 
-   Do NOT put your service_role/secret key here.
-
-   We will use your Supabase project URL
-   and public anon/publishable key.
+   Do NOT add /rest/v1/
 */
 
 const SUPABASE_URL =
-    "https://ntnmpyogqzstrdbbmmhw.supabase.co/rest/v1/";
+    "https://ntnmpyogqzstrdbbmmhw.supabase.co";
+
+
+/*
+   Public / Publishable key.
+
+   NEVER use sb_secret_ here.
+*/
 
 const SUPABASE_ANON_KEY =
     "sb_publishable_NO6geq5jNkrGgdM4qdKgeg_oLFWbfKX";
 
+
+/*
+   Create Supabase client
+*/
 
 const db =
     window.supabase.createClient(
@@ -1064,12 +1157,14 @@ const db =
    PASSWORD
 ===================================================== */
 
-
 /*
-   CHANGE THIS PASSWORD
+   PASSWORD:
+
+   ikrureempluck
 */
 
-const PASSWORD = "ikrureempluck";
+const PASSWORD =
+    "ikrureempluck";
 
 
 const lockScreen =
@@ -1077,25 +1172,30 @@ const lockScreen =
         "lockScreen"
     );
 
+
 const passwordInput =
     document.getElementById(
         "passwordInput"
     );
+
 
 const unlockBtn =
     document.getElementById(
         "unlockBtn"
     );
 
+
 const error =
     document.getElementById(
         "error"
     );
 
+
 const questionCard =
     document.getElementById(
         "questionCard"
     );
+
 
 const successCard =
     document.getElementById(
@@ -1112,60 +1212,39 @@ const music =
         "music"
     );
 
+
 const musicBtn =
     document.getElementById(
         "musicBtn"
     );
-
-let musicPlaying = false;
 
 
 function startMusic() {
 
     music.volume = 0.7;
 
+    music.play()
+        .then(function() {
 
-    const playPromise =
-        music.play();
+            musicBtn.textContent =
+                "🔊";
 
+        })
+        .catch(function(err) {
 
-    if (
-        playPromise !== undefined
-    ) {
-
-        playPromise
-            .then(
-                function() {
-
-                    musicPlaying = true;
-
-                    musicBtn.textContent =
-                        "🔊";
-
-                }
-            )
-            .catch(
-                function(error) {
-
-                    console.log(
-                        "Music autoplay blocked:",
-                        error
-                    );
-
-                    musicPlaying = false;
-
-                    musicBtn.textContent =
-                        "🎵";
-
-                }
+            console.log(
+                "Music blocked:",
+                err
             );
 
-    }
+        });
 
 }
 
 
-/* Music button */
+/* =====================================================
+   MUSIC BUTTON
+===================================================== */
 
 musicBtn.addEventListener(
     "click",
@@ -1173,41 +1252,29 @@ musicBtn.addEventListener(
 
         event.stopPropagation();
 
-
-        if (
-            music.paused
-        ) {
+        if (music.paused) {
 
             music.play()
-                .then(
-                    function() {
+                .then(function() {
 
-                        musicPlaying =
-                            true;
+                    musicBtn.textContent =
+                        "🔊";
 
-                        musicBtn.textContent =
-                            "🔊";
+                })
+                .catch(function(err) {
 
-                    }
-                )
-                .catch(
-                    function(error) {
+                    console.log(
+                        "Music error:",
+                        err
+                    );
 
-                        console.log(
-                            "Music error:",
-                            error
-                        );
-
-                    }
-                );
+                });
 
         }
 
         else {
 
             music.pause();
-
-            musicPlaying = false;
 
             musicBtn.textContent =
                 "🎵";
@@ -1222,44 +1289,17 @@ musicBtn.addEventListener(
    PASSWORD CHECK
 ===================================================== */
 
-unlockBtn.addEventListener(
-    "click",
-    checkPassword
-);
-
-
-passwordInput.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (
-            event.key === "Enter"
-        ) {
-
-            checkPassword();
-
-        }
-
-    }
-);
-
-
 function checkPassword() {
 
+    const enteredPassword =
+        passwordInput.value.trim();
+
+
     if (
-        passwordInput.value === PASSWORD
+        enteredPassword === PASSWORD
     ) {
 
-
-        /*
-           The Unlock click is a real
-           user interaction.
-
-           Start music here.
-        */
-
-        startMusic();
-
+        /* Unlock */
 
         lockScreen.style.display =
             "none";
@@ -1269,15 +1309,43 @@ function checkPassword() {
             "block";
 
 
+        error.style.display =
+            "none";
+
+
         createHearts(15);
+
+
+        /*
+           Because this function is called
+           by the Unlock button, the browser
+           allows music playback.
+        */
+
+        startMusic();
 
     }
 
     else {
 
+        error.textContent =
+            "Wrong password 😭";
+
 
         error.style.display =
             "block";
+
+
+        passwordInput.classList.remove(
+            "shake"
+        );
+
+
+        /*
+           Restart animation
+        */
+
+        void passwordInput.offsetWidth;
 
 
         passwordInput.classList.add(
@@ -1285,29 +1353,43 @@ function checkPassword() {
         );
 
 
-        passwordInput.value = "";
+        passwordInput.value =
+            "";
 
 
         passwordInput.focus();
 
-
-        setTimeout(
-            function() {
-
-                error.style.display =
-                    "none";
-
-                passwordInput.classList.remove(
-                    "shake"
-                );
-
-            },
-            1500
-        );
-
     }
 
 }
+
+
+/* Unlock button */
+
+unlockBtn.addEventListener(
+    "click",
+    checkPassword
+);
+
+
+/* Enter key */
+
+passwordInput.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Enter"
+        ) {
+
+            event.preventDefault();
+
+            checkPassword();
+
+        }
+
+    }
+);
 
 
 /* =====================================================
@@ -1322,11 +1404,7 @@ const yesBtn =
 
 yesBtn.addEventListener(
     "click",
-    function() {
-
-        forgive();
-
-    }
+    forgive
 );
 
 
@@ -1339,23 +1417,23 @@ const noBtn =
         "noBtn"
     );
 
-let noChangedToYes = false;
+
+let noChangedToYes =
+    false;
 
 
 noBtn.addEventListener(
     "click",
     function() {
 
-
         /*
            First click:
-           NO becomes YES.
+           No becomes Yes.
         */
 
         if (
             !noChangedToYes
         ) {
-
 
             noBtn.textContent =
                 "Yes ❤️";
@@ -1374,89 +1452,4 @@ noBtn.addEventListener(
 
 
             noBtn.style.boxShadow =
-                "0 10px 30px rgba(0,0,0,.2)";
-
-
-            noChangedToYes = true;
-
-
-            createHearts(20);
-
-        }
-
-
-        /*
-           Second click:
-           It is now YES.
-        */
-
-        else {
-
-            forgive();
-
-        }
-
-    }
-);
-
-
-/* =====================================================
-   FORGIVE
-===================================================== */
-
-function forgive() {
-
-
-    questionCard.style.display =
-        "none";
-
-
-    successCard.style.display =
-        "block";
-
-
-    startMusic();
-
-
-    createHearts(60);
-
-}
-
-
-/* =====================================================
-   SEND MESSAGE
-===================================================== */
-
-const messageInput =
-    document.getElementById(
-        "messageInput"
-    );
-
-const sendMessageBtn =
-    document.getElementById(
-        "sendMessageBtn"
-    );
-
-const messageStatus =
-    document.getElementById(
-        "messageStatus"
-    );
-
-
-sendMessageBtn.addEventListener(
-    "click",
-    sendMessage
-);
-
-
-async function sendMessage() {
-
-
-    const message =
-        messageInput.value.trim();
-
-
-    if (!message) {
-
-        messageStatus.textContent =
-     
+                "

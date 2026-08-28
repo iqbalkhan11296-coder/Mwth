@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Messages for Ikru ❤️</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    color: white;
+
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #ffb3c6 0%,
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 80% 80%,
+            #9b5de5 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #ff416c,
+            #7b2cbf
+        );
+
+}
+
+
+/* HEADER */
+
+.header {
+
+    max-width: 700px;
+
+    margin: 0 auto 25px;
+
+    text-align: center;
+
+}
+
+.header h1 {
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+
+}
+
+.header p {
+
+    opacity: .8;
+
+}
+
+
+/* MESSAGE CONTAINER */
+
+.messages {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+/* MESSAGE CARD */
+
+.message-card {
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    border-radius: 22px;
+
+    padding: 20px;
+
+    margin-bottom: 15px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.2);
+
+}
+
+
+.message-text {
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+    margin-bottom: 12px;
+
+    white-space: pre-wrap;
+
+}
+
+
+.message-time {
+
+    font-size: 12px;
+
+    opacity: .65;
+
+}
+
+
+/* REFRESH BUTTON */
+
+.refresh {
+
+    display: block;
+
+    margin: 0 auto 25px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 13px 25px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: #ff416c;
+
+    background: white;
+
+}
+
+
+.refresh:active {
+
+    transform: scale(.95);
+
+}
+
+
+/* EMPTY */
+
+.empty {
+
+    text-align: center;
+
+    opacity: .8;
+
+    margin-top: 50px;
+
+}
+
+
+/* LOADING */
+
+.loading {
+
+    text-align: center;
+
+    margin-top: 50px;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="header">
+
+    <h1>💌 Messages for Ikru</h1>
+
+    <p>Messages sent from your love site ❤️</p>
+
+</div>
+
+
+<button
+    class="refresh"
+    onclick="loadMessages()">
+
+    🔄 Refresh Messages
+
+</button>
+
+
+<div
+    class="messages"
+    id="messages">
+
+    <div class="loading">
+
+        Loading messages... ❤️
+
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script>
+
+
+/* =========================================
+   SUPABASE
+========================================= */
+
+const SUPABASE_URL =
+    "https://ntnmpyogqzstrdbbmmhw.supabase.co";
+
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_NO6geq5jNkrGgdM4qdKgeg_oLFWbfKX";
+
+
+const db =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+/* =========================================
+   LOAD MESSAGES
+========================================= */
+
+async function loadMessages() {
+
+    const container =
+        document.getElementById("messages");
+
+    container.innerHTML =
+        '<div class="loading">Loading messages... ❤️</div>';
+
+
+    const { data, error } =
+        await db
+            .from("messages")
+            .select("*")
+            .order(
+                "created_at",
+                {
+                    ascending: false
+                }
+            );
+
+
+    if (error) {
+
+        console.error(error);
+
+        container.innerHTML =
+            `
+            <div class="empty">
+                ❌ Couldn't load messages.
+                <br><br>
+                ${error.message}
+            </div>
+            `;
+
+        return;
+
+    }
+
+
+    if (!data || data.length === 0) {
+
+        container.innerHTML =
+            `
+            <div class="empty">
+                💌 No messages yet.
+            </div>
+            `;
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    data.forEach(function(item) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "message-card";
+
+
+        const message =
+            document.createElement("div");
+
+        message.className =
+            "message-text";
+
+        message.textContent =
+            item.message;
+
+
+        const time =
+            document.createElement("div");
+
+        time.className =
+            "message-time";
+
+        time.textContent =
+            formatDate(item.created_at);
+
+
+        card.appendChild(message);
+
+        card.appendChild(time);
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+function formatDate(date) {
+
+    if (!date) {
+
+        return "";
+
+    }
+
+    return new Date(date)
+        .toLocaleString();
+
+}
+
+
+/* =========================================
+   START
+========================================= */
+
+loadMessages();
+
+
+</script>
+
+</body>
+
+</html>

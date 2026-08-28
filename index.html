@@ -15,9 +15,9 @@
 
 <style>
 
-/* =====================================================
+/* =========================================
    RESET
-===================================================== */
+========================================= */
 
 * {
     margin: 0;
@@ -26,9 +26,9 @@
 }
 
 
-/* =====================================================
+/* =========================================
    BODY
-===================================================== */
+========================================= */
 
 body {
 
@@ -64,18 +64,20 @@ body {
             #ff416c,
             #7b2cbf
         );
+
 }
 
 
-/* =====================================================
-   BACKGROUND GLOW
-===================================================== */
+/* =========================================
+   GLOW
+========================================= */
 
 .glow {
 
     position: fixed;
 
     width: 300px;
+
     height: 300px;
 
     border-radius: 50%;
@@ -92,6 +94,7 @@ body {
         infinite
         alternate
         ease-in-out;
+
 }
 
 
@@ -100,7 +103,9 @@ body {
     background: #ff1744;
 
     top: -100px;
+
     left: -100px;
+
 }
 
 
@@ -109,9 +114,11 @@ body {
     background: #e040fb;
 
     bottom: -100px;
+
     right: -100px;
 
     animation-delay: 2s;
+
 }
 
 
@@ -120,22 +127,25 @@ body {
     from {
 
         transform:
-            translate(0, 0)
+            translate(0,0)
             scale(1);
+
     }
 
     to {
 
         transform:
-            translate(80px, 60px)
+            translate(80px,60px)
             scale(1.3);
+
     }
+
 }
 
 
-/* =====================================================
+/* =========================================
    FLOATING HEARTS
-===================================================== */
+========================================= */
 
 .heart {
 
@@ -153,6 +163,7 @@ body {
         floatUp
         linear
         forwards;
+
 }
 
 
@@ -165,11 +176,13 @@ body {
             rotate(0deg);
 
         opacity: 0;
+
     }
 
     15% {
 
         opacity: .8;
+
     }
 
     100% {
@@ -179,13 +192,15 @@ body {
             rotate(360deg);
 
         opacity: 0;
+
     }
+
 }
 
 
-/* =====================================================
+/* =========================================
    CARD
-===================================================== */
+========================================= */
 
 .card {
 
@@ -195,7 +210,7 @@ body {
 
     width: min(90%, 440px);
 
-    max-height: 92vh;
+    max-height: 90vh;
 
     overflow-y: auto;
 
@@ -226,11 +241,14 @@ body {
         cardIn
         1.2s
         cubic-bezier(.2,.8,.2,1);
+
 }
 
 
 .card::-webkit-scrollbar {
+
     width: 0;
+
 }
 
 
@@ -243,6 +261,7 @@ body {
         transform:
             translateY(50px)
             scale(.9);
+
     }
 
     to {
@@ -252,210 +271,15 @@ body {
         transform:
             translateY(0)
             scale(1);
-    }
-}
 
-
-/* =====================================================
-   PASSWORD SCREEN
-===================================================== */
-
-#lockScreen {
-
-    display: block;
-}
-
-
-.lock-icon {
-
-    font-size: 75px;
-
-    margin-bottom: 15px;
-
-    animation:
-        lockPulse
-        2s
-        infinite;
-}
-
-
-@keyframes lockPulse {
-
-    0%,100% {
-
-        transform:
-            scale(1);
     }
 
-    50% {
-
-        transform:
-            scale(1.1);
-    }
 }
 
 
-.lock-message {
-
-    font-size: 17px;
-
-    line-height: 1.7;
-
-    margin-bottom: 25px;
-}
-
-
-/* =====================================================
-   PASSWORD INPUT
-===================================================== */
-
-.password-box {
-
-    width: 100%;
-
-    padding: 16px 20px;
-
-    border: none;
-
-    outline: none;
-
-    border-radius: 50px;
-
-    font-size: 16px;
-
-    text-align: center;
-
-    margin-bottom: 15px;
-
-    background:
-        rgba(255,255,255,.95);
-
-    color: #333;
-}
-
-
-.password-box::placeholder {
-
-    color: #999;
-}
-
-
-/* =====================================================
-   BUTTONS
-===================================================== */
-
-button {
-
-    border: none;
-
-    border-radius: 50px;
-
-    padding: 15px 30px;
-
-    font-size: 17px;
-
-    font-weight: 700;
-
-    cursor: pointer;
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        background .25s ease;
-}
-
-
-button:hover {
-
-    transform:
-        translateY(-4px)
-        scale(1.03);
-}
-
-
-button:active {
-
-    transform:
-        scale(.94);
-}
-
-
-/* =====================================================
-   UNLOCK
-===================================================== */
-
-.unlock-btn {
-
-    width: 100%;
-
-    background: white;
-
-    color: #ff416c;
-
-    box-shadow:
-        0 10px 30px
-        rgba(0,0,0,.2);
-}
-
-
-/* =====================================================
-   PASSWORD ERROR
-===================================================== */
-
-#error {
-
-    display: none;
-
-    margin-top: 15px;
-
-    font-size: 14px;
-
-    color: #ffe4ec;
-}
-
-
-.shake {
-
-    animation:
-        shake .4s;
-}
-
-
-@keyframes shake {
-
-    0%,100% {
-
-        transform:
-            translateX(0);
-    }
-
-    25% {
-
-        transform:
-            translateX(-8px);
-    }
-
-    75% {
-
-        transform:
-            translateX(8px);
-    }
-}
-
-
-/* =====================================================
-   QUESTION CARD
-===================================================== */
-
-#questionCard {
-
-    display: none;
-}
-
-
-/* =====================================================
+/* =========================================
    MAIN HEART
-===================================================== */
+========================================= */
 
 .main-heart {
 
@@ -466,6 +290,7 @@ button:active {
     animation:
         heartbeat 1.3s infinite,
         glowHeart 2s infinite alternate;
+
 }
 
 
@@ -473,15 +298,16 @@ button:active {
 
     0%,100% {
 
-        transform:
-            scale(1);
+        transform: scale(1);
+
     }
 
     50% {
 
-        transform:
-            scale(1.15);
+        transform: scale(1.15);
+
     }
+
 }
 
 
@@ -494,6 +320,7 @@ button:active {
                 0 0 5px
                 rgba(255,255,255,.5)
             );
+
     }
 
     to {
@@ -503,13 +330,15 @@ button:active {
                 0 0 25px
                 rgba(255,255,255,.9)
             );
+
     }
+
 }
 
 
-/* =====================================================
+/* =========================================
    TEXT
-===================================================== */
+========================================= */
 
 .small {
 
@@ -522,6 +351,7 @@ button:active {
     opacity: .85;
 
     margin-bottom: 10px;
+
 }
 
 
@@ -535,6 +365,7 @@ h1 {
         );
 
     margin-bottom: 15px;
+
 }
 
 
@@ -547,12 +378,13 @@ h1 {
     opacity: .95;
 
     margin-bottom: 25px;
+
 }
 
 
-/* =====================================================
-   YES / NO
-===================================================== */
+/* =========================================
+   BUTTONS
+========================================= */
 
 .buttons {
 
@@ -561,8 +393,53 @@ h1 {
     justify-content: center;
 
     gap: 14px;
+
 }
 
+
+button {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding:
+        15px 30px;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+}
+
+
+button:active {
+
+    transform:
+        scale(.94);
+
+}
+
+
+/* =========================================
+   YES
+========================================= */
 
 #yesBtn {
 
@@ -573,8 +450,13 @@ h1 {
     box-shadow:
         0 10px 30px
         rgba(0,0,0,.2);
+
 }
 
+
+/* =========================================
+   NO
+========================================= */
 
 #noBtn {
 
@@ -586,12 +468,13 @@ h1 {
     border:
         1px solid
         rgba(255,255,255,.5);
+
 }
 
 
-/* =====================================================
+/* =========================================
    MESSAGE SECTION
-===================================================== */
+========================================= */
 
 .message-section {
 
@@ -602,6 +485,7 @@ h1 {
     border-top:
         1px solid
         rgba(255,255,255,.25);
+
 }
 
 
@@ -612,8 +496,13 @@ h1 {
     margin-bottom: 12px;
 
     opacity: .9;
+
 }
 
+
+/* =========================================
+   MESSAGE INPUT
+========================================= */
 
 #messageInput {
 
@@ -647,14 +536,20 @@ h1 {
         rgba(0,0,0,.12);
 
     margin-bottom: 12px;
+
 }
 
 
 #messageInput::placeholder {
 
     color: #999;
+
 }
 
+
+/* =========================================
+   SEND BUTTON
+========================================= */
 
 .send-message {
 
@@ -667,6 +562,7 @@ h1 {
     box-shadow:
         0 10px 30px
         rgba(0,0,0,.18);
+
 }
 
 
@@ -677,6 +573,7 @@ h1 {
     cursor: not-allowed;
 
     transform: none;
+
 }
 
 
@@ -687,12 +584,13 @@ h1 {
     margin-top: 10px;
 
     font-size: 14px;
+
 }
 
 
-/* =====================================================
-   MUSIC BUTTON
-===================================================== */
+/* =========================================
+   MUSIC
+========================================= */
 
 .music {
 
@@ -723,16 +621,18 @@ h1 {
     border:
         1px solid
         rgba(255,255,255,.3);
+
 }
 
 
-/* =====================================================
-   SUCCESS SCREEN
-===================================================== */
+/* =========================================
+   SUCCESS
+========================================= */
 
 .success {
 
     display: none;
+
 }
 
 
@@ -744,6 +644,7 @@ h1 {
         successBeat
         1s
         infinite;
+
 }
 
 
@@ -753,19 +654,23 @@ h1 {
 
         transform:
             scale(1);
+
     }
 
     50% {
 
         transform:
             scale(1.2);
+
     }
+
 }
 
 
 .success h1 {
 
     margin-top: 10px;
+
 }
 
 
@@ -776,12 +681,13 @@ h1 {
     font-size: 18px;
 
     font-style: italic;
+
 }
 
 
-/* =====================================================
+/* =========================================
    MOBILE
-===================================================== */
+========================================= */
 
 @media(max-width:500px) {
 
@@ -791,24 +697,28 @@ h1 {
             35px 22px;
 
         max-height: 90vh;
+
     }
 
 
     .buttons {
 
         flex-direction: column;
+
     }
 
 
     .buttons button {
 
         width: 100%;
+
     }
 
 
     .main-heart {
 
         font-size: 65px;
+
     }
 
 }
@@ -821,24 +731,20 @@ h1 {
 <body>
 
 
-<!-- =====================================================
-     BACKGROUND
-===================================================== -->
+<!-- =========================================
+     GLOW
+========================================= -->
 
 <div class="glow one"></div>
 
 <div class="glow two"></div>
 
 
-<!-- =====================================================
+<!-- =========================================
      MUSIC
-===================================================== -->
+========================================= -->
 
-<audio
-    id="music"
-    loop
-    preload="auto"
->
+<audio id="music" loop>
 
     <source
         src="song.mp3"
@@ -849,96 +755,21 @@ h1 {
 
 <button
     class="music"
-    id="musicBtn"
-    type="button"
->
+    id="musicBtn">
 
     🎵
 
 </button>
 
 
-<!-- =====================================================
-     PASSWORD SCREEN
-===================================================== -->
-
-<div
-    class="card"
-    id="lockScreen"
->
-
-    <div class="lock-icon">
-
-        🔐
-
-    </div>
-
-
-    <div class="small">
-
-        A little secret
-
-    </div>
-
-
-    <h1>
-
-        Hey Reem ❤️
-
-    </h1>
-
-
-    <p class="lock-message">
-
-        This little page is only
-        for you. 🥺
-
-        <br><br>
-
-        Enter the secret password
-        to see what's waiting
-        for you. ❤️
-
-    </p>
-
-
-    <input
-        type="password"
-        id="passwordInput"
-        class="password-box"
-        placeholder="Enter password"
-        autocomplete="off"
-    >
-
-
-    <button
-        class="unlock-btn"
-        id="unlockBtn"
-        type="button"
-    >
-
-        Unlock ❤️
-
-    </button>
-
-
-    <div id="error">
-
-        Wrong password 😭
-
-    </div>
-
-</div>
-
-
-<!-- =====================================================
+<!-- =========================================
      QUESTION CARD
-===================================================== -->
+========================================= -->
 
 <div
     class="card"
-    id="questionCard"
->
+    id="questionCard">
+
 
     <div class="main-heart">
 
@@ -972,9 +803,7 @@ h1 {
         <br><br>
 
         <b>
-
             Pleaseeee shemikkk
-
         </b>
 
     </p>
@@ -984,33 +813,30 @@ h1 {
 
     <div class="buttons">
 
-        <button
-            id="yesBtn"
-            type="button"
-        >
+
+        <button id="yesBtn">
 
             Yes ❤️
 
         </button>
 
 
-        <button
-            id="noBtn"
-            type="button"
-        >
+        <button id="noBtn">
 
             No 😤
 
         </button>
 
+
     </div>
 
 
-    <!-- =================================================
+    <!-- =====================================
          MESSAGE BOX
-    ================================================= -->
+    ====================================== -->
 
     <div class="message-section">
+
 
         <div class="message-title">
 
@@ -1028,9 +854,7 @@ h1 {
 
         <button
             id="sendMessageBtn"
-            class="send-message"
-            type="button"
-        >
+            class="send-message">
 
             Send to Ikru 💌
 
@@ -1038,22 +862,23 @@ h1 {
 
 
         <div
-            id="messageStatus"
-        ></div>
+            id="messageStatus">
+        </div>
+
 
     </div>
 
 </div>
 
 
-<!-- =====================================================
+<!-- =========================================
      SUCCESS CARD
-===================================================== -->
+========================================= -->
 
 <div
     class="card success"
-    id="successCard"
->
+    id="successCard">
+
 
     <div class="success-heart">
 
@@ -1103,48 +928,31 @@ h1 {
 
     </div>
 
+
 </div>
 
 
-<!-- =====================================================
-     SUPABASE LIBRARY
-===================================================== -->
+<!-- =========================================
+     SUPABASE
+========================================= -->
 
-<script
-    src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
-></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
 <script>
 
-/* =====================================================
+
+/* =========================================
    SUPABASE CONFIG
-===================================================== */
-
-/*
-   IMPORTANT:
-   This must be your PROJECT URL.
-
-   Do NOT add /rest/v1/
-*/
+========================================= */
 
 const SUPABASE_URL =
     "https://ntnmpyogqzstrdbbmmhw.supabase.co";
 
 
-/*
-   Public / Publishable key.
-
-   NEVER use sb_secret_ here.
-*/
-
 const SUPABASE_ANON_KEY =
     "sb_publishable_NO6geq5jNkrGgdM4qdKgeg_oLFWbfKX";
 
-
-/*
-   Create Supabase client
-*/
 
 const db =
     window.supabase.createClient(
@@ -1153,71 +961,49 @@ const db =
     );
 
 
-/* =====================================================
-   PASSWORD
-===================================================== */
+/* =========================================
+   ELEMENTS
+========================================= */
 
-/*
-   PASSWORD:
-
-   ikrureempluck
-*/
-
-const PASSWORD =
-    "ikrureempluck";
+const yesBtn =
+    document.getElementById("yesBtn");
 
 
-const lockScreen =
-    document.getElementById(
-        "lockScreen"
-    );
-
-
-const passwordInput =
-    document.getElementById(
-        "passwordInput"
-    );
-
-
-const unlockBtn =
-    document.getElementById(
-        "unlockBtn"
-    );
-
-
-const error =
-    document.getElementById(
-        "error"
-    );
+const noBtn =
+    document.getElementById("noBtn");
 
 
 const questionCard =
-    document.getElementById(
-        "questionCard"
-    );
+    document.getElementById("questionCard");
 
 
 const successCard =
-    document.getElementById(
-        "successCard"
-    );
+    document.getElementById("successCard");
 
-
-/* =====================================================
-   MUSIC
-===================================================== */
 
 const music =
-    document.getElementById(
-        "music"
-    );
+    document.getElementById("music");
 
 
 const musicBtn =
-    document.getElementById(
-        "musicBtn"
-    );
+    document.getElementById("musicBtn");
 
+
+const messageInput =
+    document.getElementById("messageInput");
+
+
+const sendMessageBtn =
+    document.getElementById("sendMessageBtn");
+
+
+const messageStatus =
+    document.getElementById("messageStatus");
+
+
+/* =========================================
+   MUSIC
+========================================= */
 
 function startMusic() {
 
@@ -1226,15 +1012,14 @@ function startMusic() {
     music.play()
         .then(function() {
 
-            musicBtn.textContent =
-                "🔊";
+            musicBtn.textContent = "🔊";
 
         })
-        .catch(function(err) {
+        .catch(function(error) {
 
             console.log(
-                "Music blocked:",
-                err
+                "Music autoplay blocked:",
+                error
             );
 
         });
@@ -1242,15 +1027,9 @@ function startMusic() {
 }
 
 
-/* =====================================================
-   MUSIC BUTTON
-===================================================== */
-
 musicBtn.addEventListener(
     "click",
-    function(event) {
-
-        event.stopPropagation();
+    function() {
 
         if (music.paused) {
 
@@ -1261,18 +1040,16 @@ musicBtn.addEventListener(
                         "🔊";
 
                 })
-                .catch(function(err) {
+                .catch(function(error) {
 
                     console.log(
                         "Music error:",
-                        err
+                        error
                     );
 
                 });
 
-        }
-
-        else {
+        } else {
 
             music.pause();
 
@@ -1285,122 +1062,9 @@ musicBtn.addEventListener(
 );
 
 
-/* =====================================================
-   PASSWORD CHECK
-===================================================== */
-
-function checkPassword() {
-
-    const enteredPassword =
-        passwordInput.value.trim();
-
-
-    if (
-        enteredPassword === PASSWORD
-    ) {
-
-        /* Unlock */
-
-        lockScreen.style.display =
-            "none";
-
-
-        questionCard.style.display =
-            "block";
-
-
-        error.style.display =
-            "none";
-
-
-        createHearts(15);
-
-
-        /*
-           Because this function is called
-           by the Unlock button, the browser
-           allows music playback.
-        */
-
-        startMusic();
-
-    }
-
-    else {
-
-        error.textContent =
-            "Wrong password 😭";
-
-
-        error.style.display =
-            "block";
-
-
-        passwordInput.classList.remove(
-            "shake"
-        );
-
-
-        /*
-           Restart animation
-        */
-
-        void passwordInput.offsetWidth;
-
-
-        passwordInput.classList.add(
-            "shake"
-        );
-
-
-        passwordInput.value =
-            "";
-
-
-        passwordInput.focus();
-
-    }
-
-}
-
-
-/* Unlock button */
-
-unlockBtn.addEventListener(
-    "click",
-    checkPassword
-);
-
-
-/* Enter key */
-
-passwordInput.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (
-            event.key === "Enter"
-        ) {
-
-            event.preventDefault();
-
-            checkPassword();
-
-        }
-
-    }
-);
-
-
-/* =====================================================
+/* =========================================
    YES BUTTON
-===================================================== */
-
-const yesBtn =
-    document.getElementById(
-        "yesBtn"
-    );
-
+========================================= */
 
 yesBtn.addEventListener(
     "click",
@@ -1408,48 +1072,287 @@ yesBtn.addEventListener(
 );
 
 
-/* =====================================================
+/* =========================================
    NO → YES
-===================================================== */
+========================================= */
 
-const noBtn =
-    document.getElementById(
-        "noBtn"
-    );
-
-
-let noChangedToYes =
-    false;
+let noChangedToYes = false;
 
 
 noBtn.addEventListener(
     "click",
     function() {
 
-        /*
-           First click:
-           No becomes Yes.
-        */
+        if (!noChangedToYes) {
 
-        if (
-            !noChangedToYes
-        ) {
+            noChangedToYes = true;
 
             noBtn.textContent =
                 "Yes ❤️";
 
-
             noBtn.style.background =
                 "white";
-
 
             noBtn.style.color =
                 "#ff416c";
 
-
             noBtn.style.border =
                 "none";
 
-
             noBtn.style.boxShadow =
-                "
+                "0 10px 30px rgba(0,0,0,.2)";
+
+            createHearts(20);
+
+        } else {
+
+            forgive();
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   FORGIVE
+========================================= */
+
+function forgive() {
+
+    questionCard.style.display =
+        "none";
+
+    successCard.style.display =
+        "block";
+
+    createHearts(60);
+
+    startMusic();
+
+}
+
+
+/* =========================================
+   SEND MESSAGE
+========================================= */
+
+sendMessageBtn.addEventListener(
+    "click",
+    sendMessage
+);
+
+
+async function sendMessage() {
+
+    const message =
+        messageInput.value.trim();
+
+
+    if (!message) {
+
+        messageStatus.textContent =
+            "Write something first ❤️";
+
+        return;
+
+    }
+
+
+    sendMessageBtn.disabled =
+        true;
+
+
+    messageStatus.textContent =
+        "Sending... 💌";
+
+
+    try {
+
+        const { error } =
+            await db
+                .from("messages")
+                .insert([
+                    {
+                        message: message
+                    }
+                ]);
+
+
+        if (error) {
+
+            console.error(
+                "Supabase error:",
+                error
+            );
+
+            messageStatus.textContent =
+                "Couldn't send 😭";
+
+            sendMessageBtn.disabled =
+                false;
+
+            return;
+
+        }
+
+
+        messageInput.value = "";
+
+
+        messageStatus.textContent =
+            "Message sent to Ikru ❤️";
+
+
+        createHearts(20);
+
+
+    } catch (error) {
+
+        console.error(error);
+
+        messageStatus.textContent =
+            "Something went wrong 😭";
+
+    }
+
+
+    sendMessageBtn.disabled =
+        false;
+
+}
+
+
+/* =========================================
+   HEART TYPES
+========================================= */
+
+const heartTypes = [
+
+    "❤️",
+    "💕",
+    "💗",
+    "💖",
+    "💘",
+    "💝"
+
+];
+
+
+/* =========================================
+   CREATE HEART
+========================================= */
+
+function createHeart() {
+
+    const heart =
+        document.createElement("div");
+
+
+    heart.className =
+        "heart";
+
+
+    heart.textContent =
+        heartTypes[
+            Math.floor(
+                Math.random()
+                *
+                heartTypes.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+
+    heart.style.fontSize =
+        (
+            15 +
+            Math.random() * 25
+        )
+        + "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random() * 6
+        )
+        + "s";
+
+
+    document.body.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        function() {
+
+            heart.remove();
+
+        },
+        12000
+    );
+
+}
+
+
+/* =========================================
+   HEART BURST
+========================================= */
+
+function createHearts(amount) {
+
+    for (
+        let i = 0;
+        i < amount;
+        i++
+    ) {
+
+        setTimeout(
+            function() {
+
+                createHeart();
+
+            },
+            i * 50
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   BACKGROUND HEARTS
+========================================= */
+
+setInterval(
+    createHeart,
+    700
+);
+
+
+/* Initial hearts */
+
+for (
+    let i = 0;
+    i < 5;
+    i++
+) {
+
+    setTimeout(
+        createHeart,
+        i * 500
+    );
+
+}
+
+</script>
+
+</body>
+
+</html>
